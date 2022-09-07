@@ -5,11 +5,11 @@ let quantCard = document.querySelector('#quant');
 let quantOptions = document.querySelector('#quant-options');
 let additionCard = document.querySelector('#addition');
 let multiplyCard = document.querySelector('#multiply');
-let memoryCard = document.querySelector('#memory');
-let divisionCard = document.querySelector('#division');
+let squaresCard = document.querySelector('#squares');
+let cubesCard = document.querySelector('#cubes');
 
-let quantAddition = document.querySelector('#quant-addition');
-let quantMultiply = document.querySelector('#quant-multiply');
+// let quantAddition = document.querySelector('#quant-addition');
+// let quantMultiply = document.querySelector('#quant-multiply');
 // let quantMemory = document.querySelector('#quant-memory');
 // let quantDivision = document.querySelector('#quant-division');
 
@@ -22,26 +22,19 @@ quantCard.addEventListener('click', function() {
 });
 
 additionCard.addEventListener('click', function() {
-    // quantOptions.classList.toggle('hide');
-    // quantAddition.classList.toggle('hide');
-
     window.open('addition.html', '_blank');
 });
 
 multiplyCard.addEventListener('click', function() {
-    // quantOptions.classList.toggle('hide');
-    // quantMultiply.classList.toggle('hide');
     window.open('multiplication.html', '_blank');
 });
 
-memoryCard.addEventListener('click', function() {
-    quantOptions.classList.toggle('hide');
-    quantMemory.classList.toggle('hide');
+squaresCard.addEventListener('click', function() {
+    window.open('squares.html', '_blank');
 });
 
-divisionCard.addEventListener('click', function() {
-    quantOptions.classList.toggle('hide');
-    quantDivision.classList.toggle('hide');
+cubesCard.addEventListener('click', function() {
+    window.open('cubes.html', '_blank');
 });
 
 hint.addEventListener('click', function() {

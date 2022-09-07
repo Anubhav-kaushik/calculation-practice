@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multiplication</title>
+    <title>Cubes</title>
 
     <link rel="stylesheet" href="css/practice.css">
     <link rel="stylesheet" href="css/index.css">
@@ -17,11 +17,11 @@
 <body>
     <header>
         <h1>
-            Multiplication Practice
+            Cubes Practice
         </h1>
     </header>
     <main>
-        <section class="main-container quant-multiply" id="quant-multiply">
+        <section class="main-container quant-cubestiply" id="quant-cubestiply">
             <section class="options">
                 <fieldset id="available-options">
                     <fieldset>
@@ -45,10 +45,10 @@
                                 Start from:
                             </legend>
 
-                            <label for="num1">
+                            <label for="start">
                                 Start from:
                             </label>
-                            <input type="number" name="num1" id="num1" value="2">
+                            <input type="number" name="start" id="start" value="2">
                         </fieldset>
 
                         <!-- num 2 max-digits -->
@@ -57,23 +57,23 @@
                                 End at:
                             </legend>
 
-                            <label for="num2">
+                            <label for="end">
                                 End at:
                             </label>
-                            <input type="number" name="num2" id="num2" value="99">
+                            <input type="number" name="end" id="end" value="25">
                         </fieldset>
                     </fieldset>
                 </fieldset>
 
 
-                <button onclick="startMultiplication('#available-options', this)">
+                <button onclick="startCubing('#available-options', this)">
                     Start
                 </button>
             </section>
 
             <section class="inside-main-container">
                 <div class="progress-bar">
-                    <div class="timer" id="timer-mul">
+                    <div class="timer" id="timer-cubes">
                         <h2>
                             <span class="hours">00</span>
                             <b>:</b>
@@ -83,27 +83,23 @@
                         </h2>
                     </div>
                 </div>
-                <div class="container container-mul">
-                    <div class="showQues showQues-mul">
+                <div class="container container-cubes">
+                    <div class="showQues showQues-cubes">
                         <div class="num-container">
-                            <span class="num" data-position="1">0</span>
-                        </div>
-                        <div class="num-container">
-                            <span class="sign">X</span>
-                            <span class="num" data-position="2">0</span>
+                            <span class="num" data-position="1">0</span><sup>3</sup>
                         </div>
                     </div>
-                    <div class="ansInput ansInput-mul">
-                        <input type="text" placeholder="Enter Your Answer" class="ans ans-mul">
+                    <div class="ansInput ansInput-cubes">
+                        <input type="text" placeholder="Enter Your Answer" class="ans ans-cubes">
                     </div>
                 </div>
-                <div class="result result-mul"></div>
+                <div class="result result-cubes"></div>
             </section>
         </section>
     </main>
     <footer></footer>
 
-    <script src="js/mul.js"></script>
+    <script src="js/cubes.js"></script>
 </body>
 
 </html>

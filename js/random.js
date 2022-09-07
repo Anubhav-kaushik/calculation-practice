@@ -1,6 +1,6 @@
 function randInt(a, b) {
     // Generate random integer in [a, b], including both end points.
-    return Math.floor(Math.random() * (b - a + 1) + a);
+    return Math.floor((Math.random() * (b - a + 1)) + a);
 }
 
 function randChoice(a) {

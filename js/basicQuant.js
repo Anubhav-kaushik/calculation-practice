@@ -94,9 +94,9 @@ function stopWatch(elementSelector) {
     let time = 0;
     let interval = setInterval(() => {
         time += 1;
-        second = time % 60;
-        minute = Math.floor(time / 60) % 60;
-        hour = Math.floor(time / 3600);
+        let second = time % 60;
+        let minute = Math.floor(time / 60) % 60;
+        let hour = Math.floor(time / 3600);
         hours.textContent = makeItTwoDigit(hour);
         minutes.textContent = makeItTwoDigit(minute);
         seconds.textContent = makeItTwoDigit(second);
