@@ -1,0 +1,87 @@
+@media screen and (max-width: 767px) {
+    html {
+        font-size: 14px;
+    }
+
+    .main-container {
+        flex-wrap: wrap;
+    }
+
+    .quant-options {
+        flex-wrap: wrap;
+    }
+
+    .quant-addition {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        flex-direction: column-reverse;
+    }
+
+    .quant-multiply {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        flex-direction: column-reverse;
+    }
+
+    .container-mul{
+        margin-bottom: 3em;
+    }
+
+    .showQues-mul {
+        padding: 0px;
+    }
+
+    .inside-main-container {
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .options {
+        width: 100%;
+        border: none;
+        height: auto;
+    }
+
+    .progress-bar {
+        width: 100%;
+    }
+
+    .timer {
+        left: 30%;
+    }
+
+    .ansInput-add input {
+        min-width: 3rem;
+        height: 3rem;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    
+    .ansInput-mul input {
+        min-width: 3rem;
+        font-size: 2rem;
+        text-align: right;
+        padding-right: 0.5rem;
+    }
+
+    .card-tab {
+        border-radius: 1em;
+        padding: 1em 2.5em;
+        margin: 3em;
+        font-size: 1.2rem;
+    }
+
+    .showQues h3 {
+        font-size: 2rem;
+    }
+
+    .showQues-add {
+        padding: 0;
+        padding-bottom: 2em;
+    }
+
+    .result-mul {
+        font-size: 2rem;
+        margin-bottom: 4em;
+    }
+}

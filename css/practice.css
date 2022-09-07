@@ -1,0 +1,149 @@
+.options {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid grey;
+    gap: 1em;
+}
+
+.options fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-inline: 1em;
+    padding: 0.5em;
+    border-radius: 10px;
+    background-color: rgba(148, 140, 255, 0.1);
+    border: 2px solid rgb(148, 140, 255);
+    max-width: 90%;
+}
+
+.options fieldset legend {
+    font-size: 1.25em;
+}
+
+.options fieldset input {
+    height: 1.5em;
+    font-size: 1.2em;
+    background-color: rgba(0, 0, 0, 0.01);
+    border: 1px solid gray;
+    padding-inline: 0.5em;
+}
+
+.options fieldset label {
+    display: none;
+}
+
+.options button {
+    padding: 0.5em 1.5em;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: white;
+    background-color: purple;
+    border: none;
+}
+
+.inside-main-container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.card-tab {
+    border: 2px solid #ccc;
+    border-radius: 1em;
+    padding: 3em;
+    margin: 2em;
+    font-size: 1.2rem;
+}
+
+.card-tab:hover {
+    background-color: rgb(107, 104, 231);
+    color: white;
+    cursor: pointer;
+}
+
+.hint {
+    text-decoration: underline;
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    color: orange;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.hint-block {
+    border: 2px solid rebeccapurple;
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em auto;
+    background-color: rgba(255, 0, 0, 0.5);
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70vw;
+    min-height: 10vh;
+}
+
+.timer {
+    position: absolute;
+    top: 0;
+    left: 45vw;
+    text-align: center;
+    margin: 1.5em auto;
+    font-size: 1.5rem;
+    color: goldenrod;
+}
+
+.showQues {
+    padding: 1.5em;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    padding-bottom: 0;
+}
+
+.showQues span {
+    margin-right: 0.2em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.ansInput input {
+    width: auto;
+    height: 4rem;
+    min-width: 5rem;
+    font-size: 4rem;
+    border: none;
+    text-align: right;
+    border-top: 2px solid grey;
+    padding-right: 2em;
+}
+
+.result {
+    display: none;
+    border: 2px solid cornflowerblue;
+    padding: 2em;
+    background-color: aliceblue;
+    color: cornflowerblue;
+    border-radius: 1em;
+}
+
+input:focus-visible {
+    outline: none;
+}

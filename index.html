@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/practice.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/basicQuant.js"></script>
+    <script src="js/random.js"></script>
+
+    <title>Dream RBI Officer</title>
+</head>
+
+<body>
+    <section class="main-container quant-multiply hide" id="quant-multiply">
+        <section class="options">
+            <div class="start-mul card-tab">
+                <h2>Start</h2>
+            </div>
+        </section>
+
+        <section class="inside-main-container">
+            <div class="progress-bar">
+                <div class="timer" id="timer-mul">
+                    <h2>
+                        <span class="hours">00</span>
+                        <b>:</b>
+                        <span class="minutes">00</span>
+                        <b>:</b>
+                        <span class="seconds">00</span>
+                    </h2>
+                </div>
+            </div>
+            <div class="container container-mul">
+                <div class="showQues showQues-mul">
+                    <div class="num1-container">
+                        <span class="num1">0</span>
+                    </div>
+                    <div class="num2-container">
+                        <span class="cross">X</span>
+                        <span class="num2">0</span>
+                    </div>
+                </div>
+                <div class="ansInput ansInput-mul">
+                    <input type="text" placeholder="Enter Your Answer" class="ans-mul">
+                </div>
+            </div>
+            <div class="result-mul"></div>
+        </section>
+    </section>
+
+    <section class="main-container quant-addition hide" id="quant-addition">
+        <section class="options">
+            <div class="start-add card-tab">
+                <h2>Start</h2>
+            </div>
+        </section>
+
+        <section class="inside-main-container">
+            <div class="hint hint-add">
+                <h3>HINT</h3>
+                <div class="hint-block hint-block-add hide"></div>
+            </div>
+            <div class="progress-bar">
+                <div class="timer" id="timer-add">
+                    <h2>
+                        <span class="hours">00</span>
+                        <b>:</b>
+                        <span class="minutes">00</span>
+                        <b>:</b>
+                        <span class="seconds">00</span>
+                    </h2>
+                </div>
+            </div>
+            <div class="container-add">
+                <div class="showQues showQues-add"></div>
+                <div class="ansInput ansInput-add hide">
+                    <input type="text" placeholder="Enter Your Answer" class="ans-add">
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="main-container quant-options hide" id="quant-options">
+
+        <div class="card" id="addition">
+            <h2>
+                Addition
+            </h2>
+        </div>
+
+
+        <div class="card" id="memory">
+            <h2>
+                Memory Booster
+            </h2>
+        </div>
+
+        <div class="card" id="multiply">
+            <h2>
+                Multiplication
+            </h2>
+        </div>
+
+
+        <div class="card" id="division">
+            <h2>
+                Division
+            </h2>
+        </div>
+
+    </section>
+
+    <section class="main-container" id="main-window">
+
+        <div class="card" id="quant">
+            <h2>
+                Quantitative Aptitude
+            </h2>
+        </div>
+
+    </section>
+
+    <script src="js/action.js"></script>
+    <script src="js/add.js"></script>
+    <script src="js/mul.js"></script>
+</body>
+
+</html>

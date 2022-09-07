@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication</title>
+
+    <link rel="stylesheet" href="css/practice.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/basicQuant.js"></script>
+    <script src="js/random.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Multiplication Practice
+        </h1>
+    </header>
+    <main>
+        <section class="main-container quant-multiply" id="quant-multiply">
+            <section class="options">
+                <fieldset id="available-options">
+                    <fieldset>
+                        <legend>
+                            Number of Questions
+                        </legend>
+
+                        <label for="num-ques">
+                            Number of Questions
+                        </label>
+                        <input type="number" name="num-ques" id="num-ques" value="10">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>
+                            Range
+                        </legend>
+                        <!-- num 1 max-digits -->
+                        <fieldset>
+                            <legend>
+                                Start from:
+                            </legend>
+
+                            <label for="num1">
+                                Start from:
+                            </label>
+                            <input type="number" name="num1" id="num1" value="2">
+                        </fieldset>
+
+                        <!-- num 2 max-digits -->
+                        <fieldset>
+                            <legend>
+                                End at:
+                            </legend>
+
+                            <label for="num2">
+                                End at:
+                            </label>
+                            <input type="number" name="num2" id="num2" value="99">
+                        </fieldset>
+                    </fieldset>
+                </fieldset>
+
+
+                <button onclick="startMultiplication('#available-options', this)">
+                    Start
+                </button>
+            </section>
+
+            <section class="inside-main-container">
+                <div class="progress-bar">
+                    <div class="timer" id="timer-mul">
+                        <h2>
+                            <span class="hours">00</span>
+                            <b>:</b>
+                            <span class="minutes">00</span>
+                            <b>:</b>
+                            <span class="seconds">00</span>
+                        </h2>
+                    </div>
+                </div>
+                <div class="container container-mul">
+                    <div class="showQues showQues-mul">
+                        <div class="num-container">
+                            <span class="num" data-position="1">0</span>
+                        </div>
+                        <div class="num-container">
+                            <span class="cross">X</span>
+                            <span class="num" data-position="2">0</span>
+                        </div>
+                    </div>
+                    <div class="ansInput ansInput-mul">
+                        <input type="text" placeholder="Enter Your Answer" class="ans-mul">
+                    </div>
+                </div>
+                <div class="result-mul"></div>
+            </section>
+        </section>
+    </main>
+    <footer></footer>
+
+    <script src="js/mul.js"></script>
+</body>
+
+</html>
