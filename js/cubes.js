@@ -12,7 +12,7 @@ async function cubesPrac(totalQues, rangeStart, rangeEnd) {
 
     const randNumList = [];
 
-    for (let j = rangeStart; j <= rangeEnd; j++) {
+    for (let j = parseInt(rangeStart); j <= parseInt(rangeEnd); j++) {
         randNumList.push(j);
     }
 
