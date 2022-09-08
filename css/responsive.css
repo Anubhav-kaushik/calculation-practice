@@ -1,34 +1,32 @@
-@media screen and (max-width: 767px) {
+@media (max-width: 750px) {
     html {
-        font-size: 14px;
+        font-size: 16px;
+    }
+
+    header {
+        padding-block: 1em;
+        background: cornflowerblue;
+        color: white;
     }
 
     .main-container {
-        flex-wrap: wrap;
+        margin-top: 2em;
+        flex-direction: column;
+        padding-top: 3em;
+        gap: 2em;
     }
 
-    .quant-options {
-        flex-wrap: wrap;
+    .main-container[data-flex-direction="reverse"] {
+        flex-direction: column-reverse;
     }
 
-    .quant-addition {
-        flex-wrap: wrap;
+    .quant {
         justify-content: flex-start;
         flex-direction: column-reverse;
     }
 
-    .quant-multiply {
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        flex-direction: column-reverse;
-    }
-
-    .container-mul{
+    .container {
         margin-bottom: 3em;
-    }
-
-    .showQues-mul {
-        padding: 0px;
     }
 
     .inside-main-container {
@@ -42,26 +40,14 @@
         height: auto;
     }
 
-    .progress-bar {
-        width: 100%;
-    }
-
-    .timer {
-        left: 30%;
-    }
-
-    .ansInput-add input {
-        min-width: 3rem;
-        height: 3rem;
-        font-size: 2.5rem;
+    .ansInput input {
+        font-size: 4rem;
         text-align: center;
+        padding: 5px 0;
     }
-    
-    .ansInput-mul input {
-        min-width: 3rem;
+
+    .ansInput input::placeholder {
         font-size: 2rem;
-        text-align: right;
-        padding-right: 0.5rem;
     }
 
     .card-tab {
@@ -75,13 +61,20 @@
         font-size: 2rem;
     }
 
-    .showQues-add {
-        padding: 0;
-        padding-bottom: 2em;
+    .showQues {
+        width: 100%;
+        text-align: center;
+        padding-top: 0;
     }
 
-    .result-mul {
+    .showQues .num-container {
+        width: 100%;
+    }
+
+    .result {
         font-size: 2rem;
-        margin-bottom: 4em;
+        width: 90%;
+        margin: 0 auto 2em;
+        padding: 0.25em 0.5em;
     }
 }

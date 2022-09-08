@@ -1,18 +1,26 @@
 async function multiplyPrac(totalQues, rangeStart, rangeEnd) {
     let quesSpeedRecord = [];
 
-    let mulContainer = document.querySelector('.container-mul');
-    let quesDiv = document.querySelector('.showQues-mul');
-    let result = document.querySelector('.result-mul');
+    const container = document.querySelector('.container');
+    const quesDiv = document.querySelector('.showQues');
+    const result = document.querySelector('.result');
+    const progressBar = document.querySelector('.progress-bar')
 
-    mulContainer.style.display = 'block';
+    container.style.display = 'block';
+    progressBar.style.display = 'block';
     result.style.display = 'none';
+
+    const randNumList = [];
+
+    for (let j = parseInt(rangeStart); j <= parseInt(rangeEnd); j++) {
+        randNumList.push(j);
+    }
 
     const timeStopper = stopWatch('#timer-mul');
 
     for (let i = 0; i < totalQues; i++) {
-        const num1 = randInt(parseInt(rangeStart), parseInt(rangeEnd));
-        const num2 = randInt(parseInt(rangeStart), parseInt(rangeEnd));
+        const num1 = randChoice(randNumList);
+        const num2 = randChoice(randNumList);
 
         const ans = num1 * num2;
 
@@ -39,8 +47,8 @@ async function multiplyPrac(totalQues, rangeStart, rangeEnd) {
     }
     timeStopper.stop();
 
-    
-    mulContainer.style.display = 'none';
+    container.style.display = 'none';
+    progressBar.style.display = 'none';
     result.style.display = 'block';
 
     const allQuesTime = [];
@@ -64,6 +72,8 @@ async function multiplyPrac(totalQues, rangeStart, rangeEnd) {
 
     result.innerHTML = `<h2> Average time: ${avgTime.toFixed(2)} seconds </h2> </br> <h2> Minimum time: ${minTime} seconds </h2> </br> <h2> Maximum time: ${maxTime} seconds </h2>`;
 
+    reverseColumn('.main-container');
+
     return quesSpeedRecord;
 }
 
@@ -82,5 +92,18 @@ function startMultiplication(fielsetSelector, button) {
         inputValues[inputId] = inputValue;
     }
 
+    reverseColumn('.main-container');
+
     multiplyPrac(inputValues['num-ques'], inputValues['num1'], inputValues['num2'])
+}
+
+function reverseColumn(containerSelector) {
+    const container = document.querySelector(containerSelector);
+    const direction = container.dataset.flexDirection;
+
+    if (direction == 'reverse') {
+        container.dataset.flexDirection = 'normal';
+    } else {
+        container.dataset.flexDirection = 'reverse';
+    }
 }

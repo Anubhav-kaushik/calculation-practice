@@ -2,15 +2,17 @@ async function additionPrac(totalQues, rangeStart, rangeEnd, numShow=2, isIntege
     const quesSpeedRecord = [];
     const numDeci = 2;
 
-    const addContainer = document.querySelector('.container-add');
-    const quesDiv = document.querySelector('.showQues-add');
-    const result = document.querySelector('.result-add');
+    const container = document.querySelector('.container');
+    const quesDiv = document.querySelector('.showQues');
+    const result = document.querySelector('.result');
+    const progressBar = document.querySelector('.progress-bar')
+
+    container.style.display = 'block';
+    progressBar.style.display = 'block';
+    result.style.display = 'none';
 
     quesDiv.innerHTML = '';
     addNumFields('.showQues-add', numShow, '+');
-
-    result.style.display = 'none';
-    addContainer.style.display = 'block';
 
     const timeStopper = stopWatch('#timer-add');
 
@@ -22,11 +24,11 @@ async function additionPrac(totalQues, rangeStart, rangeEnd, numShow=2, isIntege
         for (let j = 0; j < numShow; j++) {
             let randNum;
             if (isInteger) {
-                randNum = randInt(rangeStart, rangeEnd);
+                randNum = randInt(parseInt(rangeStart), parseInt(rangeEnd));
                 sum += randNum;
             }
             else {
-                randNum = randFloat(rangeStart, rangeEnd, numDeci);
+                randNum = randFloat(parseInt(rangeStart), parseInt(rangeEnd), numDeci);
                 sum += randNum;
             }
 
@@ -39,7 +41,7 @@ async function additionPrac(totalQues, rangeStart, rangeEnd, numShow=2, isIntege
 
         let startTime = Date.now();
 
-        await checkUntilCorrect(sum, '.container-add');
+        await checkUntilCorrect(sum, '.container');
 
         let endTime = Date.now();
         let time = (endTime - startTime) / 1000;
@@ -51,7 +53,8 @@ async function additionPrac(totalQues, rangeStart, rangeEnd, numShow=2, isIntege
     }
     timeStopper.stop();
 
-    addContainer.style.display = 'none';
+    container.style.display = 'none';
+    progressBar.style.display = 'none';
     result.style.display = 'block';
 
     const allQuesTime = [];
@@ -75,6 +78,7 @@ async function additionPrac(totalQues, rangeStart, rangeEnd, numShow=2, isIntege
 
     result.innerHTML = `<h2> Average time: ${avgTime.toFixed(2)} seconds </h2> </br> <h2> Minimum time: ${minTime} seconds </h2> </br> <h2> Maximum time: ${maxTime} seconds </h2>`;
 
+    reverseColumn('.main-container');
 }
 
 function createNumField(number, numPos, addSign='') {
@@ -138,5 +142,18 @@ function startAddition(fielsetSelector, button) {
         inputValues[inputId] = inputValue;
     }
 
-    additionPrac(inputValues['num-ques'], inputValues['num1'], inputValues['num2'], inputValues['num-layer'])
+    reverseColumn('.main-container');
+
+    additionPrac(inputValues['num-ques'], inputValues['num1'], inputValues['num2'])
+}
+
+function reverseColumn(containerSelector) {
+    const container = document.querySelector(containerSelector);
+    const direction = container.dataset.flexDirection;
+
+    if (direction == 'reverse') {
+        container.dataset.flexDirection = 'normal';
+    } else {
+        container.dataset.flexDirection = 'reverse';
+    }
 }

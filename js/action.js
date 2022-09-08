@@ -41,3 +41,5 @@ hint.addEventListener('click', function() {
     hintBlock.classList.toggle('hide');
 });
 
+
+

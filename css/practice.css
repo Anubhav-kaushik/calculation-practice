@@ -47,8 +47,13 @@
 
 .inside-main-container {
     width: 70%;
+    height: 90%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 10vh;
+    position: relative;
 }
 
 .card-tab {
@@ -88,29 +93,26 @@
 }
 
 .progress-bar {
-    position: absolute;
+    /* position: absolute;
     top: 0;
-    left: 0;
-    width: 70vw;
-    min-height: 10vh;
+    left: 0; */
+    width: 100%;
+    /* min-height: 3em; */
 }
 
 .timer {
-    position: absolute;
-    top: 0;
-    left: 45vw;
     text-align: center;
     margin: 1.5em auto;
     font-size: 1.5rem;
-    color: goldenrod;
+    color: lightcoral;
 }
 
 .showQues {
-    padding: 1.5em;
     display: flex;
     align-items: flex-end;
     flex-direction: column;
-    padding-bottom: 0;
+    width: 90%;
+    margin: auto;
 }
 
 .showQues span {
@@ -132,14 +134,12 @@
 }
 
 .ansInput input {
-    width: auto;
-    height: 4rem;
-    min-width: 5rem;
+    width: 90%;
+    margin: auto;
     font-size: 4rem;
     border: none;
     text-align: right;
     border-top: 2px solid grey;
-    padding-right: 2em;
 }
 
 .result {
