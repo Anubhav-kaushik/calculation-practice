@@ -10,8 +10,14 @@ async function cubesPrac(totalQues, rangeStart, rangeEnd) {
 
     const timeStopper = stopWatch('.timer');
 
+    const randNumList = [];
+
+    for (let j = rangeStart; j <= rangeEnd; j++) {
+        randNumList.push(j);
+    }
+
     for (let i = 0; i < totalQues; i++) {
-        const num1 = randInt(rangeStart, rangeEnd);
+        const num1 = randChoice(randNumList);
 
         const ans = num1 ** 3;
 
@@ -35,7 +41,7 @@ async function cubesPrac(totalQues, rangeStart, rangeEnd) {
     }
     timeStopper.stop();
 
-    
+
     cubesContainer.style.display = 'none';
     result.style.display = 'block';
 
