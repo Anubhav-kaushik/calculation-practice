@@ -12,7 +12,6 @@
     .main-container {
         margin-top: 2em;
         flex-direction: column;
-        padding-top: 3em;
         gap: 2em;
     }
 
