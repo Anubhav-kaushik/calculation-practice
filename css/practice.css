@@ -1,5 +1,11 @@
+.quant-options {
+    flex-wrap: wrap;
+    height: min(90vh, 800px);
+    align-items: center;
+}
+
 .options {
-    height: 90%;
+    height: min(90vh, 800px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -140,6 +146,10 @@
     border: none;
     text-align: right;
     border-top: 2px solid grey;
+}
+
+.ansInput input::placeholder {
+    font-size: min(5vw, 2rem);
 }
 
 .result {

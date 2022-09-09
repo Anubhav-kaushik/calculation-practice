@@ -29,18 +29,24 @@ button {
     cursor: pointer;
 }
 
+header {
+    padding-block: 1em;
+    background: cornflowerblue;
+    color: white;
+}
+
 main {
     position: relative;
+    padding-block: 1em;
 }
 
 .main-container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-wrap: wrap;
     gap: 2em;
     width: 100%;
-    min-height: 90vh;
+    /* height: min(90vh, 800px); */
     position: relative;
     background-color: white;
     margin: auto;

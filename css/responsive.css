@@ -3,14 +3,7 @@
         font-size: 16px;
     }
 
-    header {
-        padding-block: 1em;
-        background: cornflowerblue;
-        color: white;
-    }
-
     .main-container {
-        margin-top: 2em;
         flex-direction: column;
         gap: 2em;
     }
