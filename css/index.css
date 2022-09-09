@@ -37,10 +37,13 @@ main {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 2em;
     width: 100%;
-    margin-block-start: 90vh;
+    min-height: 90vh;
     position: relative;
     background-color: white;
+    margin: auto;
 }
 
 .card {
@@ -48,19 +51,21 @@ main {
     justify-content: center;
     align-items: center;
     border: 2px solid #ccc;
-    border-radius: 1em;
-    max-width: 450px;
+    border-radius: 0.5em;
     color: blueviolet;
+    transition: background-color 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                border-color 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955),
+                color 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 .card h2 {
     font-size: 2rem;
     text-align: center;
-    padding: 1em;
+    padding: 0.5em 1.5em;
 }
 
 .card:hover {
-    border: 2px solid #333;
+    border-color: #333;
     background-color: coral;
     color: white;
     cursor: pointer;
